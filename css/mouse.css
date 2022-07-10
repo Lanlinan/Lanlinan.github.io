@@ -1,0 +1,13 @@
+body {
+    cursor: url(https://npm.elemecdn.com/ylan-assets/mouse/default.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://npm.elemecdn.com/ylan-assets/mouse/pointer.cur),
+        default;
+}
+#nav .site-page:hover{
+      cursor: url(https://npm.elemecdn.com/ylan-assets/mouse/pointer.cur), 
+        default;
+}

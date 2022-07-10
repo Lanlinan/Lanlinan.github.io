@@ -1,0 +1,202 @@
+/*版块显隐修改*/
+#site-name{
+    visibility: hidden; /*隐藏左标题名字*/
+}
+
+/* 页脚透明 */
+#footer{
+    background: transparent!important;
+}
+/* 页脚黑色透明玻璃效果移除 */
+#footer::before{
+    background: transparent!important;
+}
+/* 头图透明 */
+#page-header{
+    background: transparent!important;
+}
+/* 头图遮罩层透明 */
+#page-header::before{
+    background: transparent!important;
+}
+/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
+#page-header.post-bg:before {
+    background-color: transparent!important;
+}
+/*夜间模式伪类遮罩层透明*/
+[data-theme="dark"]
+#footer::before{
+    background: transparent!important;
+}
+[data-theme="dark"]
+#page-header::before{
+    background: transparent!important;
+}
+/*文章目录序列*/
+#pagination .page-number.current{
+    background: #a0ccf9; !important;
+}
+/*目录添加圆角*/
+.toc-link{
+    border-radius: 6px!important;
+}
+/*文章标签圆角*/
+.aside-list-item .thumbnail,.card-category-list-link{
+    border-radius: 7px;
+}
+.aside-list-item .thumbnail,.card-archive-list-link{
+    border-radius: 7px;
+}
+/*版权圆角*/
+.post-copyright{
+    border-radius: 7px;
+
+}
+/*夜间模式*/
+[data-theme="dark"]
+#aside-content .card-widget{
+    background: rgba(0, 0, 0, 0.5)!important;
+}
+[data-theme="dark"]
+div#post{
+    background: rgba(0, 0, 0, 0.5)!important;
+}
+/*阅读模式*/
+.read-mode #aside-content .card-widget{
+    background: rgba(158, 204, 171, 0.5)!important;
+}
+.read-mode div#post{
+    background: rgba(158, 204, 171, 0.5)!important;
+}
+/*夜间模式下的阅读模式*/
+[data-theme="dark"]
+.read-mode #aside-content .card-widget{
+    background: rgba(0, 0, 0, 0.5)!important;
+    color: #ffffff;
+}
+[data-theme="dark"]
+.read-mode div#post{
+    background: rgba(0, 0, 0, 0.5)!important;
+    color: #ffffff;
+}
+/*10s为加载动画的时间，1为加载动画的次数，ease-in-out为动画效果*/
+#page-header,
+#web_bg {
+    -webkit-animation: imgblur 2s 1 ease-in-out;
+    animation: imgblur 2s 1 ease-in-out;
+}
+@keyframes imgblur {
+    0% {
+        filter: blur(5px);
+    }
+    100% {
+        filter: blur(0px);
+    }
+}
+/*适配使用-webkit内核的浏览器 */
+@-webkit-keyframes imgblur {
+    0% {
+        -webkit-filter: blur(5px);
+    }
+    100% {
+        -webkit-filter: blur(0px);
+    }
+}
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+    left: -66px !important;
+    /* 默认情况下缩进左侧66px，只留一点箭头部分 */
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+    left: 0 !important;
+    /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
+}
+/*隐藏Aplayer歌词*/
+.aplayer-lrc-contents {
+    display: none;
+}
+/*访客地图自适应尺寸及圆角*/
+.card-ip a>img{
+    border-radius: 7px!important;
+    width: 100% !important;
+    margin-top: 5px!important;
+}
+.article-sort-item-img{
+    border-radius: 7px;
+}
+span.page-number.current{
+    border-radius: 7px;
+}
+/*字体配置————————————————————————————————*/
+@font-face {
+    font-family:authorinfo;
+    src:url(https://npm.elemecdn.com/ylan-assets/fonts/authorinfo-name.woff2);
+    font-display:swap;
+    font-weight:lighter
+}
+@font-face {
+    font-family:authorinfodescription;
+    src:url(https://npm.elemecdn.com/ylan-assets/fonts/description.woff2);
+    font-display:swap;
+    font-weight:lighter
+}
+@font-face {
+    font-family:sideinformation;
+    src:url(https://npm.elemecdn.com/ylan-assets/fonts/sideinformation.woff2);
+    font-display:swap;
+    font-weight:lighter
+}
+@font-face {
+    font-family:daohanglan;
+    src:url(https://npm.elemecdn.com/ylan-assets/fonts/daohanglan.woff2);
+    font-display:swap;
+    font-weight:lighter
+}
+@font-face {
+    font-family:kstt;
+    src:url(https://npm.elemecdn.com/ylan-assets/fonts/kstt.woff2);
+    font-display:swap;
+    font-weight:lighter
+}
+/*作者名字*/
+.author-info__name {
+    font-family:authorinfo;
+}
+/*作者信息描述*/
+.author-info__description{
+    font-family:authorinfodescription;
+}
+/*侧边信息*/
+.item-headline{
+    font-family:sideinformation;
+}
+/*导航栏,首页统计和单页面统计，天气*/
+nav#nav,.article-meta-wrap,div#post-meta,.s-sticker{
+    font-family:daohanglan;
+}
+/*主页文章*/
+h1.post-title,.article-title-link{
+    font-family: kstt;
+
+}
+/*文章标题居中*/
+#post > #post-info .post-title{
+    text-align: center;
+}
+/*文章信息统计*/
+.meta-firstline{
+    text-align: center;
+}
+.meta-secondline{
+    text-align: center;
+}
+/*文章末尾推荐图片圆角*/
+img.next-cover{
+    border-radius: 7px;
+}
+#aside-content .card-widget.card-info {
+    background-image: url(https://npm.elemecdn.com/ylan-assets/images/background.webp);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100%;
+}
